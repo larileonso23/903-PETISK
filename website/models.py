@@ -33,6 +33,8 @@ class Pessoa(models.Model):
         verbose_name='Número Res.'
     )
     complemento = models.CharField(
+        null=True,
+        blank=True,
         max_length=255,
         verbose_name='Complemento'
     )
