@@ -1,8 +1,49 @@
 {% extends 'shared/layout.html' %}
+{% load staticfiles %}
 
 {% block conteudo %}
 
 <h1>Bem vindx ao PETISK</h1>
 <h1><strong>Cadastre-se para adoção</strong></h1>
+
+<form action="" method="post">
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" required>
+
+    <label for="sobrenome">Sobrenome:</label>
+    <input type="text" sobrenome="sobrenome" required>
+
+    <label for="data_de_nasc">Data de Nascimento:</label>
+    <input type="date" data_de_nasc="data_de_nasc" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" email="email" required>
+
+    <label for="str_cep">CEP:</label>
+    <input type="text" cep="str_cep" maxlength="8" required>
+
+    <label for="str_numero">Número:</label>
+    <input type="text" numero="str_numero" maxlength="5" required>
+
+    <label for="complemento">Complemento:</label>
+    <input type="text" complemento="complemento">
+
+    <select name="genero" required>
+        <option value="F">Feminino</option>
+        <option value="M">Masculino</option>
+        <option value="O">Outro</option>
+    </select>
+
+    <label for="telefone">Telefone:</label>
+    <input type="text" numero="telefone" maxlength="8">
+
+    <label for="celular">Celular:</label>
+    <input type="text" complemento="celular" required>
+
+    <label for="motivo">Motivo:</label>
+    <textarea name="motivo" cols="60" rows="10"></textarea required>
+    
+    <input type="submit" value="Cadastrar">
+</form>
 
 {% endblock %}
