@@ -3,10 +3,17 @@
 
 {% block conteudo %}
 
-<h1>Bem vindx ao PETISK</h1>
-<h1><strong>Cadastre-se para adoção</strong></h1>
+{% if nome %}
+    <h1>Bem-vindx {{nome}}</h1>
+
+{% else %}
+    <h1>Bem-vindx ao PETISK</h1>
+
+{% endif %}
+    <h2><strong>Cadastre-se para adoção</strong></h2>
 
 <form action="" method="post">
+    {% csrf token %}
     <label for="nome">Nome:</label>
     <input type="text" name="nome" required>
 
